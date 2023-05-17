@@ -19,43 +19,70 @@ header {
     height: 90px;
     width: 350px;
     background-color: #000000;
-    display: block;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    /* position: relative; */
 }
 
 .left img {
-    padding-left: 1px;
+    padding-right: 5px;
 }
 
 .left h1 {
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    float: right;
     color: white;
-    text-align: center;
-    padding-right: 75px;
     padding-top: 5px;
+    margin-left: 15px;
 }
 
 .container {
-    justify-content: center;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    width: 1200px;
     height: 100%;
 }
 
 .nav {
     display: flex;
 }
+#login {
+    background-color: #E8B147;
+    border: 10px solid #E8B147;
+    border-radius: 10px;
+}
 
 .botoes {
     font-size: 24px;
     color:white;
-    text-align: center;
+    /* text-align: center; */
     background-color: #0E14A7;
     margin: 30px 40px;
+    text-decoration: none;
 }
 .botoes:hover, .botoes:focus {
     cursor: pointer;
     outline: none;
     background-color:#3c42f8;
+}
+
+/* FASE DE TESTE  */
+@media screen and (max-width: 768px) {
+    .container {
+      display: none;
+    }
+
+    .hamburguer {
+        display: block;
+        margin-right: 10px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+}
+
+@media(max-width: 1440px){
+    .left h1 {
+        display: inline;
+    }
 }
