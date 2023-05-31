@@ -114,3 +114,34 @@ header {
     padding-left: 300px;
     padding-right: -200px;
 }
+
+footer {
+    padding-top: 10px;
+    background-color: #0E14A7;
+}
+
+.footeresquerda, .footerdireita {
+    display: inline;
+}
+
+.footeresquerda {
+    /* display: flex; */
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    align-items: center;
+    margin-right: 0;
+}
+
+.footeresquerda p {
+    margin: 0;
+}
+
+.footerdireita {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.redesocial {
+    margin-left: auto;
+}
