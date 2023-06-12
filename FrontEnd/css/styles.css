@@ -94,54 +94,80 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 85vh;
+    padding-bottom: 50px;
     background-color: black;
+    justify-content: center;
 }
 
 .container {
+    display: flex;
     width: 100%;
+    max-width: 1200px;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
 }
 
 .container img {
     padding-left: 100px;
-    max-width: 100%;
+    max-width: 100%; 
     height: auto;
+
 }
 
 .container h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-family: 'Nova Cut', cursive;
+    font-size: 45px;
     color: #E8B147;
-    padding-left: 300px;
+    padding-left: 120px;
     padding-right: -200px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) { /* Define o comportamento para telas menores */
+    .container {
+        flex-direction: column; /* Altera a direção para uma coluna */
+        justify-content: center;
+    }
+    .container h1 {
+        padding-left: 100px;
+    }
+    article {
+        padding: 20px;
+        padding-right: 100px;
+    }
 }
 
 footer {
-    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px; */
     background-color: #0E14A7;
 }
 
-.footeresquerda, .footerdireita {
-    display: inline;
-}
-
-.footeresquerda {
-    /* display: flex; */
-    font-family: 'Teko', sans-serif;
-    font-size: 20px;
-    align-items: center;
-    margin-right: 0;
-}
-
-.footeresquerda p {
-    margin: 0;
-}
-
+.footeresquerda,
 .footerdireita {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
 }
 
+.footeresquerda p,
+.footeresquerda a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.footerdireita .redesocial + .redesocial {
+    margin-left: 8px;
+}
 .redesocial {
-    margin-left: auto;
+    margin-left: 20px;
 }
