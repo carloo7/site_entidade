@@ -21,7 +21,7 @@
             <img src="images/logo_maua_esports.png" alt="Logo Mauá Esports" width="80">
             <h1>Mauá Esports</h1>
         </div>
-        <div class="container">
+        <div class="right">
             <nav>
                 <a href="sobrenos.html" class="botoes">SOBRE NÓS</a>
                 <a href="campeonatos.html" class="botoes">CAMPEONATOS</a>
@@ -31,8 +31,14 @@
                 " class="botoes">SELETIVA</a>
                 <button onclick="abrirPopUp()" id="login" class="botoes">LOGIN</a>
             </nav>
+            <div class="hamburguer">
+                <div class="hamburguericon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-        <!-- <div class="hamburguer">&#9776;</div> -->
     </header>
 
     <div id="principal">
@@ -70,6 +76,15 @@
         </section>
     </footer>
 
+    <script>
+        const hamburguer = document.querySelector('.hamburguer');
+        const nav = document.querySelector('nav');
+    
+        hamburguer.addEventListener('click', function() {
+            nav.classList.toggle('show');
+        });
+    </script>
 </body>
+
 
 </html>
