@@ -23,21 +23,31 @@
         </div>
         <div class="right">
             <nav>
-                <a href="sobrenos.html" class="botoes">SOBRE NÓS</a>
-                <a href="campeonatos.html" class="botoes">CAMPEONATOS</a>
-                <a href="times.html" class="botoes">TIMES</a>
-                <a href="staff.html" class="botoes">STAFF</a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2JAsSeL7qz_gziX6f2JROq0G_m9ZJKwss-kDjE0bsagB0Yg/closedform
-                " class="botoes">SELETIVA</a>
-                <button onclick="abrirPopUp()" id="login" class="botoes">LOGIN</a>
-            </nav>
-            <div class="hamburguer">
-                <div class="hamburguericon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-            </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="sobrenos.html" class="botoes">SOBRE</a>
+                    </li>
+                    <li>
+                        <a href="campeonatos.html" class="botoes">CAMPEONATOS</a>
+                    </li>
+                    <li>
+                        <a href="times.html" class="botoes">TIMES</a>
+                    </li>
+                    <li>
+                        <a href="staff.html" class="botoes">STAFF</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2JAsSeL7qz_gziX6f2JROq0G_m9ZJKwss-kDjE0bsagB0Yg/closedform
+                        " class="botoes">SELETIVA</a>
+                    </li>
+                    <button onclick="abrirPopUp()" id="login" class="botoes">LOGIN</a>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -77,12 +87,39 @@
     </footer>
 
     <script>
-        const hamburguer = document.querySelector('.hamburguer');
-        const nav = document.querySelector('nav');
-    
-        hamburguer.addEventListener('click', function() {
-            nav.classList.toggle('show');
-        });
+        class MobileNavBar {
+            constructor(mobileMenu, navList,    navLinks) {
+                this.mobileMenu = document.querySelector(mobileMenu);
+                this.navList = document.querySelector(navList);
+                this.navLinks = document.querySelectorAll(navLinks);
+                this.activeClass = "active";
+
+                this.handleClick = this.handleClick.bind(this);
+            }
+
+            handleClick() {
+                this.mobileMenu.classList.toggle(this.activeClass);
+                this.navList.classList.toggle(this.activeClass);
+            }
+
+            addClickEvent() {
+                this.mobileMenu.addEventListener("click", this.handleClick);
+            }
+
+            init() {
+                if (this.mobileMenu) {
+                    this.addClickEvent();
+                }
+                return this;
+            }
+        }
+        const mobileNavBar = new MobileNavBar(
+            ".mobile-menu",
+            ".nav-list",
+            ".nav-list li",
+        );
+        mobileNavBar.init();
+
     </script>
 </body>
 
