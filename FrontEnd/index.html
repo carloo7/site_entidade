@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="../BackEnd/Index.js"></script>
     <link rel="icon" href="images/logo_maua_esports.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +18,9 @@
     <header>
         <div class="left">
             <img src="images/logo_maua_esports.png" alt="Logo Mauá Esports" width="80">
-            <h1>Mauá Esports</h1>
+            <a href="index.html">
+                <h1>Mauá Esports</h1>
+            </a>
         </div>
         <div class="right">
             <nav>
@@ -86,41 +87,7 @@
         </section>
     </footer>
 
-    <script>
-        class MobileNavBar {
-            constructor(mobileMenu, navList,    navLinks) {
-                this.mobileMenu = document.querySelector(mobileMenu);
-                this.navList = document.querySelector(navList);
-                this.navLinks = document.querySelectorAll(navLinks);
-                this.activeClass = "active";
-
-                this.handleClick = this.handleClick.bind(this);
-            }
-
-            handleClick() {
-                this.mobileMenu.classList.toggle(this.activeClass);
-                this.navList.classList.toggle(this.activeClass);
-            }
-
-            addClickEvent() {
-                this.mobileMenu.addEventListener("click", this.handleClick);
-            }
-
-            init() {
-                if (this.mobileMenu) {
-                    this.addClickEvent();
-                }
-                return this;
-            }
-        }
-        const mobileNavBar = new MobileNavBar(
-            ".mobile-menu",
-            ".nav-list",
-            ".nav-list li",
-        );
-        mobileNavBar.init();
-
-    </script>
+    <script src="../BackEnd/Index.js"></script>
 </body>
 
 
