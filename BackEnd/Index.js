@@ -3,7 +3,7 @@ function abrirPopUp() {
     var height = window.innerHeight * 0.76; // Defina a altura do pop-up como 80% da altura da janela
     var left = (window.innerWidth - width) / 2; // Centralize o pop-up horizontalmente
     var top = (window.innerHeight - height) / 2; // Centralize o pop-up verticalmente
-    var popup = window.open('Login.html', 'popup', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+    var popup = window.open('login.html', 'popup', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
 }
 
 class MobileNavBar {
