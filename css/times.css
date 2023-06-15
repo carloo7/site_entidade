@@ -207,7 +207,7 @@ main {
     flex-wrap: wrap;
 }
 article {
-    padding: 40px;
+    padding: 35px;
     box-sizing: border-box;
     flex: 1 0 25%;
 }
