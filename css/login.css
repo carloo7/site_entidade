@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Define a altura da tela inteira */
+    margin: 0;
+}
+
+.half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden; /* Adicione essa propriedade para ocultar o conteúdo excedente */
+}
+
+#imagemprincipal {
+    width: 25%; /* Define a largura da imagem */
+    height: 100%; /* Define a altura da imagem */
+    object-fit: cover; /* Redimensiona proporcionalmente para cobrir todo o espaço disponível */
+}
+
+#texto {
+    background-color: #000; /* Cor de fundo para o lado do texto */
+}
+
+@media screen and (max-width: 767px) {
+    #imagemprincipal {
+        display: none; /* Oculta apenas a imagem em telas menores */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Altera a direção da divisão para linha em telas maiores */
+    }
+  
+    #imagemprincipal {
+        display: block; /* Exibir a div "half" em telas maiores */
+    }
+}
+.valido {
+    color: green;
+}
+
+.invalido {
+    color: red;
+}
+
+#titulo {
+    padding-top: 1%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #E8B147;
+}
+
+#logo {
+    text-align: center;
+}
+
+#registro {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #E8B147;
+}
+
+#jogos {
+    border: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #E8B147;
+    padding-bottom: none;
+}
+
+#registrar {
+    text-align: center;
+}
+
+#conta {
+    text-align: center;
+}
+
+#jogosv{
+    padding-top: none;
+    border: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #E8B147;
+    padding: 1%;
+}
+
+#verificar {
+    text-align: center;
+    padding-bottom: 1%;
+}
+#jogosv {
+    display: none;
+}
